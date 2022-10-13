@@ -37,7 +37,7 @@ Software to emulate Wii U games and applications on PC
 
 
 %build
-cmake -S . -B build -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja
+cmake -S . -B build -DCMAKE_BUILD_TYPE=release -DPORTABLE=OFF -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja
 cmake --build build
 
 
@@ -67,5 +67,14 @@ cp %{_builddir}/dist/linux/info.cemu.Cemu.desktop %{buildroot}%{_datadir}/applic
 
 
 %changelog
-* Thu Sep 1 2022 Max Fletcher <mfletcher@ucsb.edu>
+* Wed Oct 12 2022 Max Fletcher <jdhfxjx@outlook.com>
+- Turn off portable mode
+
+* Sat Sep 24 2022 Max Fletcher <jdhfxjx@outlook.com>
+- Remove public release flag
+
+* Mon Sep 19 2022 Max Fletcher <jdhfxjx@outlook.com>
+- Use public release flag
+
+* Thu Sep 1 2022 Max Fletcher <jdhfxjx@outlook.com>
 - Initial version
