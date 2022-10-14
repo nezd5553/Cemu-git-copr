@@ -1,0 +1,13 @@
+diff --git a/vcpkg.json b/vcpkg.json
+index 3358760..58ab21f 100644
+--- a/vcpkg.json
++++ b/vcpkg.json
+@@ -12,7 +12,6 @@
+       "default-features": false
+     },
+     "rapidjson",
+-    "sdl2",
+     "boost-tokenizer",
+     "boost-container",
+     "boost-program-options",
+

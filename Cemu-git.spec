@@ -23,6 +23,7 @@ BuildRequires:  freeglut-devel
 BuildRequires:  perl-core
 BuildRequires:  zlib-devel
 BuildRequires:  cubeb-devel
+BuildRequires:  SDL2-devel
 BuildRequires:  jbigkit-devel
 BuildRequires:  libwebp-devel
 BuildRequires:  libzstd-static
@@ -34,6 +35,8 @@ Software to emulate Wii U games and applications on PC
 %prep
 %{__git} clone --recursive https://github.com/cemu-project/Cemu ./
 %{__git} clone https://github.com/nezd5553/Cemu-git-copr
+
+patch --verbose %{_builddir}/vcpkg.json %{_builddir}/Cemu-git-copr/vcpkg.json.patch
 
 
 %build
@@ -67,6 +70,9 @@ cp %{_builddir}/dist/linux/info.cemu.Cemu.desktop %{buildroot}%{_datadir}/applic
 
 
 %changelog
+* Fri Oct 14 2022 Max Fletcher <jdhfxjx@outlook.com>
+- Use system SDL2
+
 * Wed Oct 12 2022 Max Fletcher <jdhfxjx@outlook.com>
 - Turn off portable mode
 
