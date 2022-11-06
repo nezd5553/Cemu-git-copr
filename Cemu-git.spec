@@ -52,8 +52,8 @@ mkdir -p %{buildroot}%{_datadir}/icons/hicolor/128x128/apps
 cp %{_builddir}/src/resource/logo_icon.png %{buildroot}%{_datadir}/icons/hicolor/128x128/apps/info.cemu.Cemu.png
 
 mkdir -p %{buildroot}%{_bindir}
-cp %{_builddir}/Cemu-git-copr/run-Cemu.sh %{buildroot}%{_bindir}/cemu
-chmod +x %{buildroot}%{_bindir}/cemu
+cp %{_builddir}/Cemu-git-copr/run-Cemu.sh %{buildroot}%{_bindir}/Cemu
+chmod +x %{buildroot}%{_bindir}/Cemu
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cp %{_builddir}/dist/linux/info.cemu.Cemu.desktop %{buildroot}%{_datadir}/applications/
@@ -70,6 +70,9 @@ cp %{_builddir}/dist/linux/info.cemu.Cemu.desktop %{buildroot}%{_datadir}/applic
 
 
 %changelog
+* Sat Nov 5 2022 Max Fletcher <jdhfxjx@outlook.com>
+- Fix capitalization of Cemu executable
+
 * Fri Oct 14 2022 Max Fletcher <jdhfxjx@outlook.com>
 - Use system SDL2
 
