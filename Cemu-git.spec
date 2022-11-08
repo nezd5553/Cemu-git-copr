@@ -65,7 +65,7 @@ cp %{_builddir}/dist/linux/info.cemu.Cemu.desktop %{buildroot}%{_datadir}/applic
 
 /opt/Cemu/*
 %{_datadir}/icons/hicolor/128x128/apps/info.cemu.Cemu.png
-%{_bindir}/cemu
+%{_bindir}/Cemu
 %{_datadir}/applications/info.cemu.Cemu.desktop
 
 
